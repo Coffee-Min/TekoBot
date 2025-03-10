@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TekoBot - Asistente de Trámites</title>
     <style>
-        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             color: white;
@@ -15,49 +14,46 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column; /* Alinear elementos verticalmente */
-            background-image: url('FONDOCHAT.png'); /* Ruta relativa de la imagen de fondo */
-            background-size: cover; /* Cubrir todo el fondo */
-            background-position: center; /* Centrar la imagen */
-            background-repeat: no-repeat; /* Evitar que se repita */
+            flex-direction: column; 
+            background-image: url('FONDOCHAT.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        /* Título */
         h1 {
             color: white;
             text-align: center;
             margin-bottom: 20px;
-            background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente para mejor legibilidad */
+            background-color: rgba(0, 0, 0, 0); 
             padding: 10px;
             border-radius: 10px;
         }
 
-        /* Contenedor del chat */
         .chat-container {
-            background-color: rgba(52, 73, 94, 0.8); /* Fondo semitransparente */
+            background-color: rgba(52, 73, 94, 0.8); 
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 90%; /* Ancho adaptable */
-            max-width: 500px; /* Ancho máximo */
+            width: 90%; 
+            max-width: 500px;
             height: 600px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
 
-        /* Área del chat */
         .chat-area {
             flex: 1;
             padding: 15px;
             overflow-y: auto;
-            background-color: rgba(236, 240, 241, 0.9); /* Fondo semitransparente */
+            background-color: rgba(236, 240, 241, 0.9); 
             color: black;
             border-radius: 15px 15px 0 0;
             display: flex;
             flex-direction: column;
         }
 
-        /* Mensajes del usuario */
+        
         .user-message {
             background-color: #2980B9;
             color: white;
@@ -65,10 +61,9 @@
             border-radius: 10px;
             margin-bottom: 10px;
             max-width: 70%;
-            align-self: flex-end; /* Alinea a la derecha */
+            align-self: flex-end; 
         }
 
-        /* Mensajes del chatbot */
         .chatbot-message {
             background-color: #FFFFFF;
             color: black;
@@ -76,18 +71,16 @@
             border-radius: 10px;
             margin-bottom: 10px;
             max-width: 70%;
-            align-self: flex-start; /* Alinea a la izquierda */
+            align-self: flex-start; 
         }
 
-        /* Contenedor de entrada de texto */
         .input-container {
             display: flex;
             padding: 10px;
-            background-color: rgba(10, 42, 75, 0.8); /* Fondo semitransparente */
+            background-color: rgba(10, 42, 75, 0.8); 
             border-radius: 0 0 15px 15px;
         }
 
-        /* Campo de texto */
         .input-container input {
             flex: 1;
             padding: 10px;
@@ -97,7 +90,6 @@
             font-size: 14px;
         }
 
-        /* Botón de enviar */
         .input-container button {
             padding: 10px 20px;
             background-color: #2980B9;
@@ -112,17 +104,16 @@
             background-color: #3498DB;
         }
 
-        /* Menú desplegable de opciones */
         .options-container {
-            display: none; /* Oculto por defecto */
+            display: none;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             padding: 10px;
-            margin: 0 10px 10px 10px; /* Margen inferior para separarlo del input */
+            margin: 0 10px 10px 10px; 
             max-height: 150px;
             overflow-y: auto;
-            position: relative; /* Posicionamiento relativo */
-            top: -10px; /* Mover hacia arriba */
+            position: relative; 
+            top: -10px; 
         }
 
         .options-container div {
@@ -137,20 +128,15 @@
     </style>
 </head>
 <body>
-    <!-- Título -->
     <h1>TekoBot <br> Asistente de Trámites</h1>
 
-    <!-- Contenedor del chat -->
     <div class="chat-container">
-        <!-- Área del chat -->
         <div class="chat-area" id="chat-area">
             <div class="chatbot-message">🤖 TekoBot: ¡Hola! Soy TekoBot. ¿En qué puedo ayudarte hoy?</div>
         </div>
 
-        <!-- Menú desplegable de opciones -->
         <div class="options-container" id="options-container"></div>
 
-        <!-- Contenedor de entrada de texto -->
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Escribe tu mensaje..." oninput="mostrarOpciones()" />
             <button onclick="enviarMensaje()">Enviar</button>
@@ -158,7 +144,6 @@
     </div>
 
     <script>
-        // Diccionario con información sobre trámites
         const tramitesInfo = {
             //Saludos
             "hola": "¿Desea ver el menú de los posibles trámites? Responde 'sí' para continuar.",
@@ -213,27 +198,25 @@
             "cómo registrar materias para la reinscripción": "Debes registrar tus materias a través del SIE después de haber realizado los pagos correspondientes."
         };
 
-        // Función para obtener una respuesta del diccionario
         function obtenerRespuesta(tramite) {
             tramite = tramite.toLowerCase();
             return tramitesInfo[tramite] || null;
         }
 
-        // Función para mostrar opciones relacionadas
         function mostrarOpciones() {
             const userInput = document.getElementById("user-input").value.trim().toLowerCase();
             const optionsContainer = document.getElementById("options-container");
-
+        
             if (!userInput) {
                 optionsContainer.style.display = "none";
                 return;
             }
-
-            // Filtrar opciones relacionadas y ordenarlas alfabéticamente
+        
+            // Filtrar opciones que comienzan con el texto ingresado
             const opciones = Object.keys(tramitesInfo)
-                .filter(key => key.includes(userInput))
-                .sort((a, b) => a.localeCompare(b)); // Orden alfabético
-
+                .filter(key => key.startsWith(userInput)) // Solo opciones que comienzan con el texto
+                .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
+        
             if (opciones.length > 0) {
                 optionsContainer.innerHTML = opciones.map(opcion => `<div onclick="seleccionarOpcion('${opcion}')">${opcion}</div>`).join("");
                 optionsContainer.style.display = "block";
@@ -241,15 +224,12 @@
                 optionsContainer.style.display = "none";
             }
         }
-
-        // Función para seleccionar una opción del menú desplegable
         function seleccionarOpcion(opcion) {
             document.getElementById("user-input").value = opcion;
            // document.getElementById("options-container").style.display = "none";
             enviarMensaje();
         }
 
-        // Función para enviar un mensaje
         function enviarMensaje() {
             document.getElementById("options-container").style.display = "none";
             const userInput = document.getElementById("user-input").value.trim();
@@ -257,20 +237,16 @@
 
             const chatArea = document.getElementById("chat-area");
 
-            // Mostrar el mensaje del usuario (alineado a la derecha)
             chatArea.innerHTML += `<div class="user-message">🐆 Tú: ${userInput}</div>`;
             document.getElementById("user-input").value = "";
 
-            // Obtener la respuesta
             let respuesta = obtenerRespuesta(userInput);
             if (!respuesta) {
                 respuesta = "Lo siento, no tengo información sobre eso. ¿Puedes ser más específico?";
             }
 
-            // Mostrar la respuesta del chatbot (alineado a la izquierda)
             chatArea.innerHTML += `<div class="chatbot-message">🤖 TekoBot: ${respuesta}</div>`;
 
-            // Desplazar el chat al final
             chatArea.scrollTop = chatArea.scrollHeight;
         }
     </script>
