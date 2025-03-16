@@ -53,7 +53,6 @@
             flex-direction: column;
         }
 
-        
         .user-message {
             background-color: #2980B9;
             color: white;
@@ -145,10 +144,10 @@
 
     <script>
         const tramitesInfo = {
-            //Saludos
+            // Saludos
             "hola": "¿Desea ver el menú de los posibles trámites? Responde 'sí' para continuar.",
-            "si": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción",
-            "tramites": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción",
+            "si": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción<br>◾Bajas de Materias<br>◾Baja Temporal<br>◾Justificante por Inasistencia<br>◾Actividades Complementarias",
+            "tramites": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción<br>◾Bajas de Materias<br>◾Baja Temporal<br>◾Justificante por Inasistencia<br>◾Actividades Complementarias",
             "buenos días": "¡Buenos días! ¿En qué puedo ayudarte hoy?",
             "buenas tardes": "¡Buenas tardes! ¿En qué puedo ayudarte hoy?",
             "buenas noches": "¡Buenas noches! ¿En qué puedo ayudarte hoy?",
@@ -160,15 +159,16 @@
             "adiós": "¡Hasta luego! Si necesitas más ayuda, no dudes en volver.",
             "hasta luego": "¡Nos vemos! Recuerda que estoy aquí para ayudarte cuando lo necesites.",
             "bienvenido": "¡Gracias! ¿En qué puedo ayudarte hoy?",
-            "qué trámites hay": "Estos son los trámites disponibles: Inglés, Constancias, Reposición de credencial, SIE y Reinscripción. Responde 'sí' para más detalles.",
+            "qué trámites hay": "Estos son los trámites disponibles: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia y Actividades Complementarias. Responde 'sí' para más detalles.",
             "ayuda": "Claro, estoy aquí para ayudarte. ¿Qué trámite necesitas?",
-            "menú": "Aquí tienes el menú de trámites: Inglés, Constancias, Reposición de credencial, SIE y Reinscripción. Responde 'sí' para más detalles.",
+            "menú": "Aquí tienes el menú de trámites: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia y Actividades Complementarias. Responde 'sí' para más detalles.",
             "qué necesito": "Dime qué trámite necesitas y te guiaré paso a paso.",
             "cómo empezar": "Puedes empezar diciéndome qué trámite necesitas o respondiendo 'sí' para ver el menú.",
-            "qué opciones tengo": "Puedes elegir entre estos trámites: Inglés, Constancias, Reposición de credencial, SIE y Reinscripción. Responde 'sí' para más detalles.",
+            "qué opciones tengo": "Puedes elegir entre estos trámites: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia y Actividades Complementarias. Responde 'sí' para más detalles.",
             "qué más puedes hacer": "Además de ayudarte con trámites, puedo darte información sobre fechas, requisitos y procesos. ¿Qué necesitas?",
             "qué es tecobot": "Soy TekoBot, tu asistente virtual para trámites en el Tecnológico, creado por el Equipo 1. ¿En qué puedo ayudarte?",
-            //tramites            
+
+            // Trámites existentes (Inglés, Constancias, etc.)
             "ingles": "¿Qué desea saber de inglés?<br>◾Pago de módulos<br>◾Dónde pagar<br>◾Proceso de pago<br>◾Dónde entregar el comprobante<br>◾Inscripción al examen de colocación<br>◾Lugar del examen de colocación<br>◾Fecha del examen de colocación<br>◾Requisitos para el examen de colocación",
             "pago de modulos": "Para pagar los módulos de inglés, debes realizar el pago en el banco y llevar el comprobante a la oficina de Servicios Escolares.",
             "dónde pagar": "Debes realizar el pago en el banco y llevar el comprobante a la oficina de Servicios Escolares.",
@@ -195,28 +195,53 @@
             "reinscripcion": "¿Qué desea saber sobre Reinscripción?<br>◾Reinscripción a la universidad<br>◾Fecha de reinscripción<br>◾Cómo registrar materias para la reinscripción",
             "reinscripción a la universidad": "La reinscripción se realiza en línea a través del SIE. Recuerda realizar los pagos antes de registrar tus materias.",
             "fecha de reinscripción": "La reinscripción debe realizarse en las fechas asignadas por la universidad. Revisa el calendario académico para conocer las fechas exactas.",
-            "cómo registrar materias para la reinscripción": "Debes registrar tus materias a través del SIE después de haber realizado los pagos correspondientes."
+            "cómo registrar materias para la reinscripción": "Debes registrar tus materias a través del SIE después de haber realizado los pagos correspondientes.",
+
+            // Nuevos trámites
+            "bajas de materias": "¿Qué desea saber sobre Bajas de Materias?<br>◾Primer paso para bajas de materias<br>◾Marcar materias y entregar documentos<br>◾Verificación y autorización de baja<br>◾Finalización del proceso",
+            "primer paso para bajas de materias": "1. Consulta en el Calendario de Actividades el periodo para bajas de materias.<br>2. Saca dos fotocopias de tu Carga Académica (horario oficial).",
+            "marcar materias y entregar documentos": "1. Marca las materias que deseas dar de baja en los 3 tantos de la Carga Académica.<br>2. Acude con el Coordinador de tu carrera y entrega el original y las copias.<br>3. Continúa asistiendo a clases mientras esperas el resultado.",
+            "verificación y autorización de baja": "El Coordinador verificará si procede la baja. Si se autoriza, registrará la baja en el sistema y la marcará en tu Carga Académica.",
+            "finalización del proceso": "1. Regresa por el original de tu Carga Académica.<br>2. Verifica en el sistema que la materia ya no aparezca.<br>3. Conserva tu Carga Académica para cualquier aclaración.",
+
+            "baja temporal": "¿Qué desea saber sobre Baja Temporal?<br>◾Periodo para solicitar baja temporal<br>◾Iniciar el proceso de baja temporal<br>◾Entrega de la solicitud<br>◾Verificación de la baja temporal",
+            "periodo para solicitar baja temporal": "Consulta en el Calendario de Actividades el periodo establecido (aproximadamente en la 4ª o 5ª semana de clases).",
+            "iniciar el proceso de baja temporal": "1. Ingresa al Centro de Servicios del portal del ITVH.<br>2. Haz clic en 'Solicitud de Baja Temporal'.<br>3. Llena los datos y imprime 3 copias de la solicitud.",
+            "entrega de la solicitud": "Entrega las 3 copias de la solicitud en la División de Estudios Profesionales. Conserva tu copia con el sello de recibido.",
+            "verificación de la baja temporal": "Antes de finalizar el semestre, verifica en el SIE que no tengas materias cargadas y que tu situación sea 'BAJA TEMPORAL'.",
+
+            "justificante por inasistencia": "¿Qué desea saber sobre Justificante por Inasistencia?<br>◾Documentación requerida<br>◾Preparación de la documentación<br>◾Entrega de la documentación<br>◾Recolección del justificante",
+            "documentación requerida": "Recaba el documento original y una fotocopia que avale tu inasistencia.",
+            "preparación de la documentación": "En la fotocopia, escribe tu número de control, carrera y el periodo por el que solicitas el justificante.",
+            "entrega de la documentación": "Entrega las fotocopias en la jefatura de la División de Estudios Profesionales.",
+            "recolección del justificante": "Regresa al siguiente día hábil a la División de Estudios Profesionales por el justificante elaborado.",
+
+            "actividades complementarias": "¿Qué desea saber sobre Actividades Complementarias?<br>◾Iniciar el proceso<br>◾Registro de la solicitud<br>◾Desarrollo de actividades<br>◾Finalización del semestre<br>◾Entrega de la Constancia de Acreditación",
+            "iniciar el proceso": "1. Ingresa al sistema de 'Actividades Complementarias' en el portal del ITVH durante la tercera semana de clases.<br>2. Imprime la solicitud correspondiente.",
+            "registro de la solicitud": "Entrega 2 copias de la solicitud en la División de Estudios Profesionales para su registro.",
+            "desarrollo de actividades": "1. Coordínate con los maestros que desarrollarán los proyectos.<br>2. Verifica en el sistema que el proyecto esté registrado.",
+            "finalización del semestre": "1. Recaba las evidencias necesarias (constancias, reportes, etc.).<br>2. Imprime 4 copias de la Constancia de Acreditación.",
+            "entrega de la constancia de acreditación": "1. Entrega las 4 copias y las evidencias en el Departamento responsable para firma y sello.<br>2. Entrega una copia en la División de Estudios Profesionales y otra en Servicios Escolares."
         };
 
         function obtenerRespuesta(tramite) {
             tramite = tramite.toLowerCase();
-            return tramitesInfo[tramite] || null;
+            return tramitesInfo[tramite] || "Lo siento, no tengo información sobre eso. ¿Puedes ser más específico?";
         }
 
         function mostrarOpciones() {
             const userInput = document.getElementById("user-input").value.trim().toLowerCase();
             const optionsContainer = document.getElementById("options-container");
-        
+
             if (!userInput) {
                 optionsContainer.style.display = "none";
                 return;
             }
-        
-            // Filtrar opciones que comienzan con el texto ingresado
+
             const opciones = Object.keys(tramitesInfo)
-                .filter(key => key.startsWith(userInput)) // Solo opciones que comienzan con el texto
-                .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
-        
+                .filter(key => key.startsWith(userInput))
+                .sort((a, b) => a.localeCompare(b));
+
             if (opciones.length > 0) {
                 optionsContainer.innerHTML = opciones.map(opcion => `<div onclick="seleccionarOpcion('${opcion}')">${opcion}</div>`).join("");
                 optionsContainer.style.display = "block";
@@ -224,9 +249,9 @@
                 optionsContainer.style.display = "none";
             }
         }
+
         function seleccionarOpcion(opcion) {
             document.getElementById("user-input").value = opcion;
-           // document.getElementById("options-container").style.display = "none";
             enviarMensaje();
         }
 
@@ -241,10 +266,6 @@
             document.getElementById("user-input").value = "";
 
             let respuesta = obtenerRespuesta(userInput);
-            if (!respuesta) {
-                respuesta = "Lo siento, no tengo información sobre eso. ¿Puedes ser más específico?";
-            }
-
             chatArea.innerHTML += `<div class="chatbot-message">🤖 TekoBot: ${respuesta}</div>`;
 
             chatArea.scrollTop = chatArea.scrollHeight;
