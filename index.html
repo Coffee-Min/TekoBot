@@ -146,8 +146,8 @@
         const tramitesInfo = {
             // Saludos
             "hola": "¿Desea ver el menú de los posibles trámites? Responde 'sí' para continuar.",
-            "si": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción<br>◾Bajas de Materias<br>◾Baja Temporal<br>◾Justificante por Inasistencia<br>◾Actividades Complementarias<br>◾Titulación",
-            "tramites": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción<br>◾Bajas de Materias<br>◾Baja Temporal<br>◾Justificante por Inasistencia<br>◾Actividades Complementarias<br>◾Titulación",
+            "si": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción<br>◾Bajas de Materias<br>◾Baja Temporal<br>◾Justificante por Inasistencia<br>◾Actividades Complementarias<br>◾Titulación<br>◾Cambio de Carrera<br>◾Cursos de Verano<br>◾Traslado a ITVH",
+            "tramites": "MENU:<br>◾Inglés<br>◾Constancias<br>◾Reposición de credencial<br>◾SIE<br>◾Reinscripción<br>◾Bajas de Materias<br>◾Baja Temporal<br>◾Justificante por Inasistencia<br>◾Actividades Complementarias<br>◾Titulación<br>◾Cambio de Carrera<br>◾Cursos de Verano<br>◾Traslado a ITVH",
             "buenos días": "¡Buenos días! ¿En qué puedo ayudarte hoy?",
             "buenas tardes": "¡Buenas tardes! ¿En qué puedo ayudarte hoy?",
             "buenas noches": "¡Buenas noches! ¿En qué puedo ayudarte hoy?",
@@ -159,12 +159,12 @@
             "adiós": "¡Hasta luego! Si necesitas más ayuda, no dudes en volver.",
             "hasta luego": "¡Nos vemos! Recuerda que estoy aquí para ayudarte cuando lo necesites.",
             "bienvenido": "¡Gracias! ¿En qué puedo ayudarte hoy?",
-            "qué trámites hay": "Estos son los trámites disponibles: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia, Actividades Complementarias y Titulación. Responde 'sí' para más detalles.",
+            "qué trámites hay": "Estos son los trámites disponibles: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia, Actividades Complementarias, Titulación, Cambio de Carrera, Cursos de Verano y Traslado a ITVH. Responde 'sí' para más detalles.",
             "ayuda": "Claro, estoy aquí para ayudarte. ¿Qué trámite necesitas?",
-            "menú": "Aquí tienes el menú de trámites: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia, Actividades Complementarias y Titulación. Responde 'sí' para más detalles.",
+            "menú": "Aquí tienes el menú de trámites: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia, Actividades Complementarias, Titulación, Cambio de Carrera, Cursos de Verano y Traslado a ITVH. Responde 'sí' para más detalles.",
             "qué necesito": "Dime qué trámite necesitas y te guiaré paso a paso.",
             "cómo empezar": "Puedes empezar diciéndome qué trámite necesitas o respondiendo 'sí' para ver el menú.",
-            "qué opciones tengo": "Puedes elegir entre estos trámites: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia, Actividades Complementarias y Titulación. Responde 'sí' para más detalles.",
+            "qué opciones tengo": "Puedes elegir entre estos trámites: Inglés, Constancias, Reposición de credencial, SIE, Reinscripción, Bajas de Materias, Baja Temporal, Justificante por Inasistencia, Actividades Complementarias, Titulación, Cambio de Carrera, Cursos de Verano y Traslado a ITVH. Responde 'sí' para más detalles.",
             "qué más puedes hacer": "Además de ayudarte con trámites, puedo darte información sobre fechas, requisitos y procesos. ¿Qué necesitas?",
             "qué es tecobot": "Soy TekoBot, tu asistente virtual para trámites en el Tecnológico, creado por el Equipo 1. ¿En qué puedo ayudarte?",
 
@@ -247,7 +247,35 @@
             "memoria de experiencia profesional": "Informe técnico de proyectos desarrollados en el sector productivo o de servicios.",
             "escolaridad por promedio": "Titulación automática al obtener un promedio general mayor o igual a 90.",
             "escolaridad por posgrado": "Titulación al acreditar una especialización o parte de una maestría reconocida.",
-            "memoria de residencia profesional": "Informe final que acredita la experiencia adquirida durante la residencia profesional."
+            "memoria de residencia profesional": "Informe final que acredita la experiencia adquirida durante la residencia profesional.",
+
+            // Nuevo trámite: Cambio de Carrera
+            "cambio de carrera": "¿Qué desea saber sobre el Procedimiento de Cambio de Carrera?<br>◾Pre-registro en SATME<br>◾Solicitud en línea<br>◾Entrega de formatos<br>◾Entrevista y test profesiográfico<br>◾Convalidación de materias<br>◾Reinscripción",
+            "pre-registro en satme": "1. Acude a la División de Estudios Profesionales al finalizar el semestre para realizar el pre-registro en SATME.",
+            "solicitud en línea": "1. Ingresa al SATME en el portal del ITVH.<br>2. Selecciona 'Cambio de Carrera', indica la carrera actual, la solicitada y los motivos.<br>3. Imprime 3 copias del 'Formato de Solicitud de Cambio de Carrera'.",
+            "entrega de formatos": "1. Entrega un formato en el Depto. de Desarrollo Académico para agendar entrevista y test.<br>2. Entrega otro formato en la División de Estudios Profesionales.",
+            "entrevista y test profesiográfico": "1. Acude a la entrevista y test en las fechas asignadas.<br>2. Si no te presentas, tu solicitud será cancelada.",
+            "convalidación de materias": "1. Verifica los resultados en la División de Estudios Profesionales.<br>2. Ingresa al SATME para agregar las materias cursadas.<br>3. Obtén el 'Dictamen de Convalidación de Estudios'.",
+            "reinscripción cambio de carrera": "1. Verifica tu nueva carrera en Servicios Escolares.<br>2. Realiza tu reinscripción normalmente.",
+
+            // Nuevo trámite: Inscripción a Cursos de Verano
+            "cursos de verano": "¿Qué desea saber sobre la Inscripción a Cursos de Verano?<br>◾Consulta de fechas<br>◾Solicitud en SICUVE<br>◾Confirmación de grupos<br>◾Pago de cursos<br>◾Verificación de reinscripción",
+            "consulta de fechas": "1. Revisa el Calendario de Actividades Escolares para conocer las fechas de inscripción.",
+            "solicitud en sicuve": "1. Ingresa al SICUVE en el portal del ITVH.<br>2. Selecciona 'Solicitar Materias', elige la materia, turno y propón un maestro.<br>3. Guarda tu solicitud.",
+            "confirmación de grupos": "1. Verifica en el SICUVE los grupos autorizados.<br>2. Confirma los grupos que deseas cursar (máximo 2).",
+            "pago de cursos": "1. Imprime la referencia bancaria y realiza el pago.<br>2. Entrega las fichas de depósito y el formato de solicitud al Coordinador.",
+            "verificación de reinscripción": "1. Verifica en el SIE que estés reinscrito.<br>2. Recibe tu Carga Académica con el Coordinador.",
+
+            // Nuevo trámite: Traslado de otro IT al ITVH
+            "traslado a itvh": "¿Qué desea saber sobre el Traslado de otro IT al ITVH?<br>◾Solicitud de traslado<br>◾Envío de documentación<br>◾Oficio de aceptación<br>◾Constancia de no inconveniencia<br>◾Registro en Servicios Escolares<br>◾Pago de reinscripción<br>◾Reinscripción y carga académica",
+            "solicitud de traslado": "1. Presenta la 'Solicitud de Traslado' en tu Instituto de origen al finalizar el semestre.",
+            "envío de documentación": "1. Tu Instituto de origen envía la solicitud y el kárdex oficial al ITVH.",
+            "oficio de aceptación": "1. El ITVH genera el 'Oficio de Aceptación' y lo envía a tu Instituto de origen.",
+            "constancia de no inconveniencia": "1. Tu Instituto de origen elabora la 'Constancia de no Inconveniencia' y envía la documentación al ITVH.",
+            "registro en servicios escolares": "1. Confirma que la documentación fue recibida en el ITVH.<br>2. Acude a Servicios Escolares para verificar tu registro.",
+            "pago de reinscripción": "1. Acude a Recursos Financieros para darte de alta en el sistema de pagos.<br>2. Realiza el pago por concepto de reinscripción.",
+            "reinscripción y carga académica": "1. Acude a la División de Estudios Profesionales para reinscribirte.<br>2. Recibe tu Carga Académica (horario)."
+
         };
 
 
